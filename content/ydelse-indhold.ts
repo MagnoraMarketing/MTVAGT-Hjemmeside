@@ -178,7 +178,11 @@ export const ydelseIndhold: Record<string, YdelseIndhold> = {
         svar: "Ja. Vagterne er trænet i rolig og professionel konflikthåndtering og griber ind korrekt, hvis en situation kræver det.",
       },
     ],
-    relateretBlog: ["butiksvagt-og-svind", "saadan-vaelger-du-et-autoriseret-vagtselskab"],
+    relateretBlog: [
+      "butiksvagt-og-svind",
+      "butiksvagt-i-juletravlhed-og-udsalg",
+      "saadan-vaelger-du-et-autoriseret-vagtselskab",
+    ],
   },
 
   "tryghedsvagt-psykiatri": {
@@ -208,7 +212,11 @@ export const ydelseIndhold: Record<string, YdelseIndhold> = {
         svar: "Ja. Alt personale er autoriseret og godkendt til at arbejde under vagtloven og handler altid inden for lovens rammer.",
       },
     ],
-    relateretBlog: ["kommunevagt-tryghed-i-det-offentlige-rum", "saadan-vaelger-du-et-autoriseret-vagtselskab"],
+    relateretBlog: [
+      "tryghedsvagt-i-boligomraader",
+      "kommunevagt-tryghed-i-det-offentlige-rum",
+      "saadan-vaelger-du-et-autoriseret-vagtselskab",
+    ],
   },
 
   fastvagt: {
@@ -238,7 +246,11 @@ export const ydelseIndhold: Record<string, YdelseIndhold> = {
         svar: "En fastvagt er til stede hele vagten på én adresse, mens en runderingsvagt kører planlagte runder mellem flere punkter. Fastvagt giver højere tilstedeværelse.",
       },
     ],
-    relateretBlog: ["runderingsvagt-fastvagt-portvagt", "vagtdaekning-i-trekantsomraadet"],
+    relateretBlog: [
+      "tomme-bygninger-under-renovering",
+      "runderingsvagt-fastvagt-portvagt",
+      "vagtdaekning-i-trekantsomraadet",
+    ],
   },
 
   kommunevagt: {
@@ -268,7 +280,11 @@ export const ydelseIndhold: Record<string, YdelseIndhold> = {
         svar: "Ja. Vores arbejde omfatter opgaver i den offentlige sektor, og kommunevagt er en naturlig del af det, vi tilbyder.",
       },
     ],
-    relateretBlog: ["kommunevagt-tryghed-i-det-offentlige-rum", "vagt-til-arrangementer-og-events"],
+    relateretBlog: [
+      "vagt-paa-genbrugspladsen",
+      "kommunevagt-tryghed-i-det-offentlige-rum",
+      "vagt-til-arrangementer-og-events",
+    ],
   },
 
   brandvagt: {

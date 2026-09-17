@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   title: "Blog om vagt, sikkerhed og tryghed",
   description:
     "Viden om byggepladssikkerhed, vagtløsninger, adgangskontrol og tryghed i trekantsområdet. Læs MT Vagts blog om sikkerhed og vagtservice.",
-  alternates: { canonical: "/blog" },
+  alternates: {
+    canonical: "/blog",
+    types: { "application/rss+xml": "/feed.xml" },
+  },
 };
 
 export default function BlogOversigt() {
