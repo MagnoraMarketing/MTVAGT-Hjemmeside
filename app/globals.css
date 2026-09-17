@@ -1,0 +1,220 @@
+@import "tailwindcss";
+
+/* =========================================================
+   MT Vagt — designtokens
+   Udledt fra logoet: mat sort base, sølv/stål, rød accent.
+   ========================================================= */
+
+@theme {
+  /* Ink / mørke flader */
+  --color-ink: #0b0f14;
+  --color-ink-2: #11161d;
+  --color-grafit: #1a212b;
+  --color-linje: #232c37;
+
+  /* Stål / sølv-skala */
+  --color-staal-moerk: #333a42;
+  --color-staal: #5b636c;
+  --color-staal-lys: #9aa2ab;
+  --color-soelv: #c9d0d6;
+  --color-krom: #eef1f4;
+
+  /* Accent (logoets røde) */
+  --color-accent: #d42233;
+  --color-accent-klar: #e5283a;
+  --color-accent-dyb: #9e1420;
+
+  /* Lyse flader */
+  --color-papir: #f5f6f7;
+  --color-papir-kant: #e4e7ea;
+  --color-blaek: #0b0f14;
+
+  /* Skrifttyper (sat via next/font) */
+  --font-overskrift: var(--font-archivo), "Archivo", system-ui, sans-serif;
+  --font-brød: var(--font-inter), "Inter", system-ui, sans-serif;
+
+  /* Container */
+  --spacing-hairline: 1px;
+}
+
+:root {
+  --baggrund: var(--color-ink);
+  --forgrund: var(--color-krom);
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--baggrund);
+  color: var(--forgrund);
+  font-family: var(--font-brød);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Undgå utilsigtet vandret scroll på mobil (lange ord/overlays) */
+  overflow-x: hidden;
+}
+
+/* Overskrifter — stærk grotesk, stram tracking */
+h1,
+h2,
+h3,
+h4,
+.overskrift {
+  font-family: var(--font-overskrift);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  line-height: 1.02;
+}
+
+/* Fokus-tilstand med accentfarve (a11y) */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--color-accent-klar);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Fin 1px kornstruktur som subtil tekstur-overlay */
+.kornstruktur {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* Tynde hairline-gitterlinjer */
+.gitter {
+  background-image: linear-gradient(
+      to right,
+      color-mix(in srgb, var(--color-linje) 60%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--color-linje) 60%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 88px 88px;
+}
+
+@keyframes puls-radius {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .respekter-reduceret {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   3D / dybde-effekter (uden AI — ren CSS/SVG)
+   ========================================================= */
+
+/* Lagdelt dybdeskygge + subtil indvendig highlight → 3D-relief */
+.dybde-3d {
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 2px 4px -2px rgba(0, 0, 0, 0.5),
+    0 18px 36px -18px rgba(0, 0, 0, 0.8),
+    0 30px 60px -30px rgba(0, 0, 0, 0.7);
+}
+
+/* Hover-tilt der giver kort/billeder et 3D-pop */
+.tilt-3d {
+  transform: perspective(1000px) rotateX(0) rotateY(0) translateY(0);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+  will-change: transform;
+}
+.tilt-3d:hover {
+  transform: perspective(1000px) rotateX(5deg) translateY(-6px) scale(1.012);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    0 8px 16px -8px rgba(0, 0, 0, 0.6),
+    0 44px 80px -32px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(212, 34, 51, 0.18);
+}
+
+/* Glans-strejf øverst (glass/3D) */
+.glans-3d {
+  position: relative;
+}
+.glans-3d::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(0, 0, 0, 0.18) 100%
+  );
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tilt-3d,
+  .tilt-3d:hover {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Langsom cinematisk zoom (Ken Burns) til hero-billeder */
+@keyframes kenburns {
+  0% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1.14);
+  }
+}
+.kenburns {
+  animation: kenburns 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Blødt svævende løft til billedkort */
+@keyframes svaev {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.svaev {
+  animation: svaev 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kenburns,
+  .svaev {
+    animation: none;
+  }
+}
