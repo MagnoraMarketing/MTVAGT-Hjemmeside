@@ -51,7 +51,14 @@ export function localBusinessLd() {
       closes: "23:59",
     },
     slogan: virksomhed.slogan,
-    memberOf: { "@type": "Organization", name: "VSL", url: virksomhed.autorisation.vslUrl },
+    memberOf: [
+      { "@type": "Organization", name: "VSL", url: virksomhed.autorisation.vslUrl },
+      {
+        "@type": "Organization",
+        name: "Dansk Industri",
+        url: virksomhed.autorisation.diUrl,
+      },
+    ],
   };
 }
 

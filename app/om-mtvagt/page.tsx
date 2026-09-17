@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { virksomhed } from "@/content/virksomhed";
 import { Billede } from "@/components/Billede";
 import { Broedkrumme } from "@/components/Broedkrumme";
 import { Afsloer } from "@/components/Sektion";
 import { SeoSektion } from "@/components/SeoSektion";
 import { CtaBaand } from "@/components/CtaBaand";
+import { PopupLink } from "@/components/PopupLink";
 
 export const metadata: Metadata = {
   title: "Om MT Vagt — autoriseret vagtselskab i Fredericia",
@@ -56,6 +58,20 @@ export default function OmSide() {
             <blockquote className="mt-8 border-l-2 border-accent pl-5 text-xl italic text-krom">
               {virksomhed.positionering}
             </blockquote>
+            <PopupLink
+              href={virksomhed.autorisation.diBadge}
+              className="mt-8 inline-flex items-center gap-3 rounded-full border border-linje py-1.5 pl-1.5 pr-4 text-sm text-staal-lys transition-colors hover:text-krom"
+              ariaLabel="Åbn medlemsbevis for Dansk Industri i nyt vindue"
+            >
+              <Image
+                src={virksomhed.autorisation.diMaerke}
+                alt=""
+                width={32}
+                height={32}
+                className="h-8 w-8 rounded-full object-cover"
+              />
+              Medlem af Dansk Industri
+            </PopupLink>
           </Afsloer>
           <Afsloer delay={0.1}>
             <Billede
@@ -107,7 +123,7 @@ export default function OmSide() {
               { k: "Base", v: virksomhed.base },
               { k: "Dækning", v: "Hele Danmark" },
               { k: "CVR", v: virksomhed.cvr },
-              { k: "Medlemskab", v: "VSL · ISO-certificeret" },
+              { k: "Medlemskab", v: "VSL · Dansk Industri · ISO-certificeret" },
             ].map((f) => (
               <div
                 key={f.k}
@@ -125,7 +141,7 @@ export default function OmSide() {
         overskrift="Et autoriseret vagtselskab med rod i trekantsområdet"
         afsnit={[
           "MT Vagt & Vikarservice ApS er et autoriseret vagtselskab med base i Taulov ved Fredericia. Vores mål er enkelt: at skabe tryghed for vores kunder ved at løse hver opgave efter høj standard. Vi har ekspertise i hele Danmark — med hovedfokus på trekantsområdet (Fredericia, Kolding, Vejle og Odense) — og hjælper både private virksomheder, entreprenører, boligselskaber, foreninger og den offentlige sektor.",
-          "For os er autorisationen ikke en formalitet, men fundamentet under alt, hvad vi gør. Alt vores personale er vagtuddannet, sikkerhedsgodkendt af danske myndigheder og godkendt til at arbejde under vagtloven. Alle vagter bærer legitimationskort udstedt af Rigspolitiet, kan yde førstehjælp og betjene hjertestarter. Vi er ISO-certificeret og medlem af VSL. Et autoriseret vagtselskab er din garanti for, at opgaven ikke løses af amatører.",
+          "For os er autorisationen ikke en formalitet, men fundamentet under alt, hvad vi gør. Alt vores personale er vagtuddannet, sikkerhedsgodkendt af danske myndigheder og godkendt til at arbejde under vagtloven. Alle vagter bærer legitimationskort udstedt af Rigspolitiet, kan yde førstehjælp og betjene hjertestarter. Vi er ISO-certificeret og medlem af VSL og Dansk Industri. Et autoriseret vagtselskab er din garanti for, at opgaven ikke løses af amatører.",
           "Vi stræber ikke efter at blive de største i branchen. Til gengæld sætter vi en ære i at være tæt på vores kunder, kende vores område og løse opgaven ordentligt – hver gang. Døgnvagt, tillid og tryghed er ikke bare ord for os, men den måde vi arbejder på.",
         ]}
         faq={[
@@ -139,7 +155,7 @@ export default function OmSide() {
           },
           {
             spoergsmaal: "Er I certificeret?",
-            svar: "Ja. Vi er et autoriseret vagtselskab, ISO-certificeret og medlem af VSL.",
+            svar: "Ja. Vi er et autoriseret vagtselskab, ISO-certificeret og medlem af VSL og Dansk Industri.",
           },
           {
             spoergsmaal: "Tilbyder I døgnvagt?",

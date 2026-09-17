@@ -8,6 +8,7 @@ const punkter: {
   tekst: string;
   href?: string;
   eksternt?: boolean;
+  linkTekst?: string;
 }[] = [
   {
     titel: "Autoriseret vagtselskab",
@@ -24,6 +25,12 @@ const punkter: {
     tekst: "Medlem af Vagt- og Sikkerhedsindustriens Landssammenslutning.",
     href: virksomhed.autorisation.vslUrl,
     eksternt: true,
+  },
+  {
+    titel: "Medlem af Dansk Industri",
+    tekst: "Medlem af Danmarks største erhvervsorganisation for produktions- og servicevirksomheder.",
+    href: virksomhed.autorisation.diBadge,
+    linkTekst: "Se medlemsbevis",
   },
   {
     titel: "Rigspolitiets legitimationskort",
@@ -54,6 +61,7 @@ export function Certifikater() {
 
         <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-linje bg-linje sm:grid-cols-2 lg:grid-cols-3">
           {punkter.map((p, i) => {
+            const linkTekst = p.linkTekst ?? (p.eksternt ? "Besøg vsl.dk" : "Se certifikat");
             const indhold = (
               <>
                 <span className="text-accent" aria-hidden>
@@ -65,7 +73,7 @@ export function Certifikater() {
                 </p>
                 {p.href && (
                   <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent">
-                    {p.eksternt ? "Besøg vsl.dk" : "Se certifikat"}
+                    {linkTekst}
                     <span aria-hidden>→</span>
                   </span>
                 )}
@@ -79,7 +87,7 @@ export function Certifikater() {
                   <PopupLink
                     href={p.href}
                     className={klasse}
-                    ariaLabel={p.eksternt ? "Åbn vsl.dk i nyt vindue" : "Åbn ISO-certifikat i nyt vindue"}
+                    ariaLabel={`Åbn ${linkTekst.toLowerCase()} i nyt vindue`}
                   >
                     {indhold}
                   </PopupLink>

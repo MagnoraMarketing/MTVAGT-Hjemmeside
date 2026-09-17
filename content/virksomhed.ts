@@ -45,6 +45,12 @@ export const virksomhed = {
     isoCertifikat: "/docs/ISO_Certificat_MT_Vagt.pdf",
     vslMedlem: true,
     vslUrl: "https://vsl.dk",
+    diMedlem: true,
+    diUrl: "https://www.danskindustri.dk",
+    // Fuldt medlemsbevis — åbnes i nyt vindue ved klik.
+    diBadge: "/img/medlem-dansk-industri.jpg",
+    // Tæt beskåret udgave af samme billede, til små badge-visninger (footer, om-siden).
+    diMaerke: "/img/medlem-dansk-industri-mark.jpg",
     rigspoliti:
       "Alle vagter bærer vagt-legitimationskort udstedt af Rigspolitiet.",
     foerstehjaelp:
