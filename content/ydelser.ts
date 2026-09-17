@@ -32,7 +32,7 @@ export const ydelser: Ydelse[] = [
       "Brandforebyggelse uden for arbejdstid",
       "Rundering og fast tilstedeværelse efter behov",
     ],
-    relaterede: ["runderingsvagt", "portvagt-stationaer-vagt", "akut-vagt"],
+    relaterede: ["runderingsvagt", "brandvagt", "portvagt-stationaer-vagt", "akut-vagt"],
     seoTitel: "Byggepladsvagt Fyn & Trekantsområdet | MT Vagt",
     seoBeskrivelse:
       "Autoriseret byggepladsvagt i trekantsområdet. Beskyt materiel, værktøj og maskiner mod tyveri, hærværk og brand. Ring +45 3131 4428.",
@@ -53,7 +53,7 @@ export const ydelser: Ydelse[] = [
       "Afdækning af kriminalitet og uregelmæssigheder",
       "Dokumenteret rapportering efter hver runde",
     ],
-    relaterede: ["byggepladsvagt", "fastvagt", "akut-vagt"],
+    relaterede: ["byggepladsvagt", "brandvagt", "fastvagt", "akut-vagt"],
     seoTitel: "Runderingsvagt i trekantsområdet | MT Vagt",
     seoBeskrivelse:
       "Runderingsvagt med tilsyn uden for åbningstid i boliger, virksomheder og på byggepladser. Autoriseret vagtselskab. Ring +45 3131 4428.",
@@ -141,6 +141,26 @@ export const ydelser: Ydelse[] = [
     seoTitel: "Tryghedsvagt & psykiatri | Et tryggere Danmark | MT Vagt",
     seoBeskrivelse:
       "Tryghedsvagt i det offentlige rum, på bosteder og i psykiatrien. Professionel konflikthåndtering og respekt. Ring +45 3131 4428.",
+  },
+  {
+    slug: "brandvagt",
+    titel: "Brandvagt",
+    undertitel: "Brandvagt ved varmt arbejde og events",
+    kerne:
+      "Brandvagt under og efter varmt arbejde, ved events og andre steder med forhøjet brandrisiko.",
+    ikon: "flame",
+    intro:
+      "En brandvagt fra MT Vagt holder øje med brandrisikoen under og efter varmt arbejde, ved arrangementer og andre steder med forhøjet risiko — og griber ind, før en gnist bliver til en brand.",
+    punkter: [
+      "Brandvagt under og efter varmt arbejde som svejsning, skæring og tagarbejde",
+      "Brandvagt ved arrangementer, events og festivaler",
+      "Tidlig opdagelse af gnister, ulmebrand og røgudvikling",
+      "Klar handling og alarmering efter fast procedure",
+    ],
+    relaterede: ["byggepladsvagt", "runderingsvagt", "akut-vagt"],
+    seoTitel: "Brandvagt ved varmt arbejde & events | MT Vagt",
+    seoBeskrivelse:
+      "Brandvagt til varmt arbejde, byggepladser og events i trekantsområdet. Autoriseret vagtselskab med hurtig udrykning. Ring +45 3131 4428.",
   },
   {
     slug: "fastvagt",

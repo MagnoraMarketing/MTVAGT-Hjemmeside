@@ -10,7 +10,7 @@ import { MdxIndhold } from "@/components/MdxIndhold";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { MagnetiskKnap } from "@/components/MagnetiskKnap";
 import { JsonLd, faqLd } from "@/components/JsonLd";
-import { SITE, absolutUrl } from "@/lib/site";
+import { SITE, absolutUrl, siteTitel } from "@/lib/site";
 import { BILLEDER } from "@/lib/billed-manifest";
 
 export function generateStaticParams() {
@@ -26,7 +26,7 @@ export async function generateMetadata({
   if (!alleSlugs().includes(slug)) return {};
   const { meta } = hentIndlaeg(slug);
   return {
-    title: meta.seoTitel,
+    title: siteTitel(meta.seoTitel),
     description: meta.seoBeskrivelse,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {

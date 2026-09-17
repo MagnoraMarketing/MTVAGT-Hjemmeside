@@ -7,6 +7,8 @@ export const BILLEDER: Record<string, string> = {
   "hero-byggeplads-nat": "/img/hero-byggeplads-nat.jpg",
   "kommune-vagt-dag": "/img/kommune-vagt-dag.jpg",
   "materiel-lager": "/img/materiel-lager.jpg",
+  "medlem-dansk-industri-mark": "/img/medlem-dansk-industri-mark.jpg",
+  "medlem-dansk-industri": "/img/medlem-dansk-industri.jpg",
   "portvagt-daggry": "/img/portvagt-daggry.jpg",
   "rundering-koeretoej-nat": "/img/rundering-koeretoej-nat.jpg",
   "team-briefing": "/img/team-briefing.jpg",

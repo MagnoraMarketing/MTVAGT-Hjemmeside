@@ -146,7 +146,7 @@ export default function ReferencerSide() {
         overskrift="Autoriseret dansk vagtfirma med dokumenteret erfaring"
         afsnit={[
           "MT Vagt & Vikarservice ApS løser vagtopgaver for både private virksomheder, entreprenører, boligselskaber, samarbejdspartnere i sikkerhedsbranchen og den offentlige sektor. Uanset opgavens størrelse løser vi den efter høj standard — det er kernen i vores arbejde og grunden til, at kunder vender tilbage.",
-          "Som autoriseret dansk vagtselskab er alt vores personale vagtuddannet, sikkerhedsgodkendt af danske myndigheder og godkendt til at arbejde under vagtloven. Alle vagter bærer legitimationskort udstedt af Rigspolitiet, kan yde førstehjælp og betjene hjertestarter. Vi er ISO-certificeret og medlem af VSL — din garanti for, at opgaven ikke løses af amatører.",
+          "Som autoriseret dansk vagtselskab er alt vores personale vagtuddannet, sikkerhedsgodkendt af danske myndigheder og godkendt til at arbejde under vagtloven. Alle vagter bærer legitimationskort udstedt af Rigspolitiet, kan yde førstehjælp og betjene hjertestarter. Vi er ISO-certificeret og medlem af VSL og Dansk Industri — din garanti for, at opgaven ikke løses af amatører.",
           "Vi har base i Taulov ved Fredericia og ekspertise i hele Danmark, med hovedfokus på trekantsområdet. Vil du høre mere om, hvordan vi kan løse netop din opgave, så ring til os på " +
             virksomhed.telefon.visning +
             " for en uforpligtende snak.",

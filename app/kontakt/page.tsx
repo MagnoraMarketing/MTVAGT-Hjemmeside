@@ -179,7 +179,7 @@ export default function KontaktSide() {
           {
             spoergsmaal: "Er MT Vagt et autoriseret og certificeret vagtselskab?",
             svar:
-              "Ja. Vi er et autoriseret vagtselskab, ISO-certificeret og medlem af VSL. Alle vagter bærer legitimationskort udstedt af Rigspolitiet og kan yde førstehjælp og betjene hjertestarter.",
+              "Ja. Vi er et autoriseret vagtselskab, ISO-certificeret og medlem af VSL og Dansk Industri. Alle vagter bærer legitimationskort udstedt af Rigspolitiet og kan yde førstehjælp og betjene hjertestarter.",
           },
           {
             spoergsmaal: "Hvilke områder dækker I?",

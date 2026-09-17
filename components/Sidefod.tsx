@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { virksomhed } from "@/content/virksomhed";
 import { ydelser } from "@/content/ydelser";
@@ -99,6 +100,20 @@ export function Sidefod() {
               ariaLabel="Åbn vsl.dk i nyt vindue"
             >
               Medlem af VSL
+            </PopupLink>
+            <PopupLink
+              href={virksomhed.autorisation.diBadge}
+              className="flex items-center gap-1.5 rounded-full border border-linje py-1 pl-1 pr-3 hover:text-krom"
+              ariaLabel="Åbn medlemsbevis for Dansk Industri i nyt vindue"
+            >
+              <Image
+                src={virksomhed.autorisation.diMaerke}
+                alt=""
+                width={20}
+                height={20}
+                className="h-5 w-5 rounded-full object-cover"
+              />
+              Medlem af Dansk Industri
             </PopupLink>
           </div>
         </div>

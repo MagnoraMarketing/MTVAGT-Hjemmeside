@@ -138,6 +138,7 @@ export function CinematiskHero() {
               "Hele Danmark",
               "ISO-certificeret",
               "Medlem af VSL",
+              "Medlem af Dansk Industri",
               "Rigspolitiets legitimationskort",
               "Døgnvagt · 24/7",
             ].map((t) => (
