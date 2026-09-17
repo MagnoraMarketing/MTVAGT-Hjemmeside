@@ -11,6 +11,7 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import { MagnetiskKnap } from "@/components/MagnetiskKnap";
 import { JsonLd, faqLd } from "@/components/JsonLd";
 import { SITE, absolutUrl } from "@/lib/site";
+import { BILLEDER } from "@/lib/billed-manifest";
 
 export function generateStaticParams() {
   return alleSlugs().map((slug) => ({ slug }));
@@ -34,6 +35,14 @@ export async function generateMetadata({
       description: meta.seoBeskrivelse,
       url: absolutUrl(`/blog/${slug}`),
       publishedTime: meta.dato,
+      // Bruger indlæggets eget hero-billede, når det findes — ellers standard-OG-billedet.
+      images: [
+        {
+          url: BILLEDER[meta.hero] ?? "/opengraph-image",
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
   };
 }

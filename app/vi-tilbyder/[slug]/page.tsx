@@ -36,6 +36,8 @@ export function generateMetadata({
         title: y.seoTitel,
         description: y.seoBeskrivelse,
         url: absolutUrl(`/vi-tilbyder/${y.slug}`),
+        // Sidespecifik openGraph erstatter root-layoutets — billedet skal sættes eksplicit igen.
+        images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
       },
     };
   });

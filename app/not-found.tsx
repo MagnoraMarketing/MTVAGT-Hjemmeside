@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { MagnetiskKnap } from "@/components/MagnetiskKnap";
+
+// Next.js injicerer selv noindex for 404-sider, så det behøver vi ikke sætte her.
+export const metadata: Metadata = {
+  title: "Siden blev ikke fundet",
+};
 
 export default function IkkeFundet() {
   return (
