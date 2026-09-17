@@ -140,4 +140,21 @@ export const ydelseEkstraSeo: Record<string, SeoBlok[]> = {
       ],
     },
   ],
+
+  brandvagt: [
+    {
+      overskrift: "Brandvagt ved varmt arbejde — også efter fyraften",
+      afsnit: [
+        "Svejsning, skæring, lodning og andet varmt arbejde efterlader ofte gnister og varme materialer, der kan ulme i timevis, før en egentlig brand bryder ud. Risikoen er størst, netop når arbejdet er slut, og der ikke længere er nogen til stede til at opdage det. En brandvagt fortsætter tilsynet, efter håndværkerne er gået hjem, og fanger tegn på ulmebrand, mens den stadig kan slukkes med det samme.",
+        "MT Vagt tilrettelægger brandvagten efter opgavens omfang — fra et par timers efterkontrol til fast tilstedeværelse gennem hele arbejdet. Vagten kender de tidlige advarselstegn og reagerer efter en fast procedure, hvis noget opstår.",
+      ],
+    },
+    {
+      overskrift: "Brandvagt til events og arrangementer",
+      afsnit: [
+        "Scener, teltkonstruktioner, festivalbelysning og mange mennesker samlet på ét sted stiller særlige krav til brandsikkerheden. Mange beredskabsplaner for events og arrangementer forudsætter derfor en fast brandvagt, der holder øje gennem hele arrangementet og kender flugtveje og procedurer, hvis noget skulle opstå.",
+        "Som autoriseret dansk vagtselskab leverer vi brandvagt til arrangementer i trekantsområdet og resten af Danmark — tilpasset arrangementets størrelse, varighed og risikoprofil.",
+      ],
+    },
+  ],
 };

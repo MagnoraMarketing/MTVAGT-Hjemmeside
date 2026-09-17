@@ -22,6 +22,7 @@ filen med det rette navn, så vises den automatisk i stedet for pladsholderen.
 | `team-briefing` | 16:9 | Two security guards in a calm, professional briefing, indoor low-key lighting, plain dark uniforms, seen from behind/side. Moody desaturated grade with amber accent, teamwork/culture feel, no logos, no identifiable faces. |
 | `tryghedsvagt-bosted` | 4:5 | Calm, respectful security guard in a public/social care environment (bosted / public space), reassuring and low-key presence, plain dark attire. Soft neutral light, gentle cool grade, no logos, no identifiable faces. |
 | `fastvagt-adresse-nat` | 4:5 | Security guard stationed at the entrance of a fixed address at night, standing watch, plain dark uniform, subtle interior light behind. Cold night grade with warm doorway glow, filmic grain, no logos, no face. |
+| `brandvagt-varmt-arbejde` | 4:5 | Security guard on fire-watch duty near a construction site at night, standing attentively beside scaffolding with a fire extinguisher visible, residual glow from finished hot work in the background. Cold night grade with warm ember accent, filmic grain, no logos, no identifiable face. *(Bruges endnu ikke — `brandvagt` genbruger `materiel-lager` som hero, indtil dette billede findes.)* |
 
 ## Tekstur-shots (til sektions-dividers)
 

@@ -14,7 +14,7 @@ import { CtaBaand } from "@/components/CtaBaand";
 import { MagnetiskKnap } from "@/components/MagnetiskKnap";
 import { RisikoSlider } from "@/components/RisikoSlider";
 import { JsonLd } from "@/components/JsonLd";
-import { SITE, absolutUrl } from "@/lib/site";
+import { SITE, absolutUrl, siteTitel } from "@/lib/site";
 
 export function generateStaticParams() {
   return ydelser.map((y) => ({ slug: y.slug }));
@@ -29,7 +29,7 @@ export function generateMetadata({
     const y = ydelseBySlug(slug);
     if (!y) return {};
     return {
-      title: y.seoTitel,
+      title: siteTitel(y.seoTitel),
       description: y.seoBeskrivelse,
       alternates: { canonical: `/vi-tilbyder/${y.slug}` },
       openGraph: {

@@ -270,4 +270,41 @@ export const ydelseIndhold: Record<string, YdelseIndhold> = {
     ],
     relateretBlog: ["kommunevagt-tryghed-i-det-offentlige-rum", "vagt-til-arrangementer-og-events"],
   },
+
+  brandvagt: {
+    heroBillede: "materiel-lager",
+    heroVariant: "nat",
+    seoOverskrift: "Brandvagt ved varmt arbejde og arrangementer",
+    seoAfsnit: [
+      "Brandvagt handler om at have et opmærksomt menneske til stede, netop når brandrisikoen er forhøjet. Det gælder klassisk under og efter varmt arbejde som svejsning, skæring og tagarbejde med åben ild, hvor gnister kan antænde en ulmebrand, der først viser sig timer senere. Det gælder også ved arrangementer og events med scener, telte, festivalbelysning og mange mennesker samlet på ét sted, hvor beredskabsplanen ofte forudsætter en fast brandvagt.",
+      "Vores brandvagter holder øje under selve arbejdet eller arrangementet og fortsætter tilsynet den kritiske periode bagefter, hvor en ulmebrand typisk viser sig. Vagten kender de tidlige tegn – røglugt, varmeudvikling, misfarvet materiale – og reagerer efter en fast procedure: alarmerer, tilkalder hjælp og begrænser skaden inden for sikre rammer, hvis noget opstår.",
+      "MT Vagt er et autoriseret vagtselskab med base i Taulov ved Fredericia, der dækker hele Danmark med hovedfokus på trekantsområdet. Skal du bruge en brandvagt til varmt arbejde, en byggeplads eller et arrangement i Fredericia, Kolding, Vejle eller Odense, tilrettelægger vi bemandingen efter opgavens varighed og risiko.",
+    ],
+    faq: [
+      {
+        spoergsmaal: "Hvornår skal jeg bruge en brandvagt?",
+        svar: "Typisk ved varmt arbejde som svejsning, skæring, tagarbejde eller andet arbejde med åben ild eller gnistdannelse, samt ved arrangementer og events, hvor beredskabsplanen kræver brandvagt. Vi rådgiver gerne om, hvad din konkrete opgave kræver.",
+      },
+      {
+        spoergsmaal: "Hvor længe skal brandvagten blive efter arbejdet er slut?",
+        svar: "Det afhænger af opgaven og materialerne, men en ulmebrand efter varmt arbejde viser sig ofte først et stykke tid efter, at selve arbejdet er afsluttet. Vi aftaler en efterkontrolperiode, der matcher risikoen.",
+      },
+      {
+        spoergsmaal: "Kan I levere brandvagt til events og arrangementer?",
+        svar: "Ja. Vi leverer brandvagt til arrangementer, festivaler og events, hvor mange mennesker er samlet, og hvor beredskabsplanen forudsætter opmærksom brandvagt gennem hele arrangementet.",
+      },
+      {
+        spoergsmaal: "Hvad gør brandvagten, hvis der opstår noget?",
+        svar: "Vagten reagerer efter en fast procedure – alarmerer, tilkalder hjælp og handler for at begrænse skaden inden for sikre rammer – og dokumenterer hændelsen bagefter.",
+      },
+      {
+        spoergsmaal: "Er jeres brandvagter autoriserede?",
+        svar: "Ja. MT Vagt er et autoriseret vagtselskab, og alt personale er vagtuddannet, sikkerhedsgodkendt og bærer legitimationskort udstedt af Rigspolitiet.",
+      },
+    ],
+    relateretBlog: [
+      "brandvagt-ved-varmt-arbejde",
+      "brandvagt-til-events-og-arrangementer",
+    ],
+  },
 };
