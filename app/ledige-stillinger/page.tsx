@@ -4,6 +4,7 @@ import { virksomhed } from "@/content/virksomhed";
 import { ydelser, ydelseBySlug } from "@/content/ydelser";
 import { Broedkrumme } from "@/components/Broedkrumme";
 import { Afsloer } from "@/components/Sektion";
+import { TillidsChips } from "@/components/TillidsChips";
 import { MagnetiskKnap } from "@/components/MagnetiskKnap";
 import { EmailLink } from "@/components/EmailLink";
 import { SeoSektion } from "@/components/SeoSektion";
@@ -48,6 +49,7 @@ export default function JobSide() {
               Vi er altid interesserede i at høre fra dygtige, ansvarsbevidste
               mennesker, der vil være med til at skabe tryghed i {virksomhed.region}.
             </p>
+            <TillidsChips className="mt-7" />
           </Afsloer>
         </div>
       </section>
