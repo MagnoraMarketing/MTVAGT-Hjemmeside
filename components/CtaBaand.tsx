@@ -25,7 +25,7 @@ export function CtaBaand({
           </h2>
           <p className="mt-3 text-lg text-staal-lys">
             {tekst ??
-              `${virksomhed.garanti} Ring til os for en uforpligtende snak om din opgave.`}
+              `${virksomhed.garanti} På flere af vores opgavetyper dækker vi hele Danmark — kontakt os for et uforpligtende tilbud.`}
           </p>
         </div>
         <div className="flex flex-wrap gap-4">

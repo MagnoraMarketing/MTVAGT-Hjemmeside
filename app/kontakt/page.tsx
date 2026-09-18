@@ -44,6 +44,10 @@ export default function KontaktSide() {
               dine behov, ikke en standardpakke. Fortæl os om opgaven, så vender vi
               hurtigt tilbage med et uforpligtende tilbud tilpasset dig.
             </p>
+            <p className="mt-3 text-lg text-staal-lys">
+              På flere af vores opgavetyper dækker vi hele Danmark — så uanset
+              hvor opgaven er, må du gerne kontakte os for et tilbud.
+            </p>
             <TillidsChips className="mt-7" />
           </Afsloer>
         </div>
