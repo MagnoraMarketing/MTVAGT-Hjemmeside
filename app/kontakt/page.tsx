@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { virksomhed } from "@/content/virksomhed";
 import { Broedkrumme } from "@/components/Broedkrumme";
 import { Afsloer } from "@/components/Sektion";
+import { TillidsChips } from "@/components/TillidsChips";
 import { KontaktFormular } from "@/components/KontaktFormular";
 import { EmailLink } from "@/components/EmailLink";
 import { Certifikater } from "@/components/Certifikater";
@@ -43,21 +44,11 @@ export default function KontaktSide() {
               dine behov, ikke en standardpakke. Fortæl os om opgaven, så vender vi
               hurtigt tilbage med et uforpligtende tilbud tilpasset dig.
             </p>
-            <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm text-staal-lys">
-              {[
-                "Vi tager små som store opgaver",
-                "Individuel pris pr. opgave",
-                "Uforpligtende tilbud",
-                "Autoriseret vagtselskab",
-              ].map((t) => (
-                <li key={t} className="flex items-center gap-2">
-                  <span className="text-accent" aria-hidden>
-                    ✓
-                  </span>
-                  {t}
-                </li>
-              ))}
-            </ul>
+            <p className="mt-3 text-lg text-staal-lys">
+              På flere af vores opgavetyper dækker vi hele Danmark — så uanset
+              hvor opgaven er, må du gerne kontakte os for et tilbud.
+            </p>
+            <TillidsChips className="mt-7" />
           </Afsloer>
         </div>
       </section>

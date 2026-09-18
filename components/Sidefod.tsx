@@ -18,6 +18,13 @@ export function Sidefod() {
             {virksomhed.base}, der dækker {virksomhed.daekningBred} — med hovedfokus
             på {virksomhed.region}.
           </p>
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-staal-lys">
+            På flere af vores opgavetyper dækker vi hele Danmark.{" "}
+            <Link href="/kontakt" className="text-krom underline hover:text-accent">
+              Kontakt os for et tilbud
+            </Link>
+            .
+          </p>
         </div>
 
         <div>
