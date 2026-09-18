@@ -106,6 +106,26 @@ export function CinematiskHero() {
             Autoriseret vagtselskab · Fredericia
           </span>
 
+          {/* Tillids-chips */}
+          <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-3 text-sm text-staal-lys">
+            {[
+              "Autoriseret af myndighederne",
+              "Hele Danmark",
+              "ISO-certificeret",
+              "Medlem af VSL",
+              "Medlem af Dansk Industri",
+              "Rigspolitiets legitimationskort",
+              "Døgnvagt · 24/7",
+            ].map((t) => (
+              <li key={t} className="flex items-center gap-2">
+                <span className="text-accent" aria-hidden>
+                  ✓
+                </span>
+                {t}
+              </li>
+            ))}
+          </ul>
+
           <h1 className="mt-6 text-balance text-[2rem] font-extrabold leading-[1.05] tracking-tight text-krom [overflow-wrap:anywhere] sm:text-5xl sm:leading-[0.98] md:text-6xl lg:text-7xl">
             Tryghed hele døgnet
             <span className="block text-staal-lys">
@@ -130,26 +150,6 @@ export function CinematiskHero() {
               Akut vagt? Ring {virksomhed.telefon.visning}
             </a>
           </div>
-
-          {/* Tillids-chips */}
-          <ul className="mt-12 flex flex-wrap gap-x-6 gap-y-3 text-sm text-staal-lys">
-            {[
-              "Autoriseret af myndighederne",
-              "Hele Danmark",
-              "ISO-certificeret",
-              "Medlem af VSL",
-              "Medlem af Dansk Industri",
-              "Rigspolitiets legitimationskort",
-              "Døgnvagt · 24/7",
-            ].map((t) => (
-              <li key={t} className="flex items-center gap-2">
-                <span className="text-accent" aria-hidden>
-                  ✓
-                </span>
-                {t}
-              </li>
-            ))}
-          </ul>
         </div>
       </motion.div>
 
