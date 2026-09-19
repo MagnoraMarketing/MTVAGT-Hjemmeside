@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ydelser } from "@/content/ydelser";
 import { ydelseIndhold } from "@/content/ydelse-indhold";
 import { Billede } from "@/components/Billede";
+import { cn } from "@/lib/utils";
 
 // Sticky pinned service scroller: listen "pinnes" til venstre, mens
 // kort/billeder skifter til højre, efterhånden som man scroller.
@@ -29,17 +30,42 @@ export function FastlaasteYdelser() {
     return () => obs.disconnect();
   }, []);
 
+  function goTil(i: number) {
+    refs.current[i]?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
   return (
-    <section className="border-t border-linje bg-ink-2 py-24">
+    <section className="border-t border-linje bg-ink-2 py-14 md:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
           Sådan skaber vi tryghed
         </p>
-        <h2 className="mt-4 max-w-2xl text-4xl font-extrabold tracking-tight text-krom sm:text-5xl">
+        <h2 className="mt-4 max-w-2xl text-3xl font-extrabold tracking-tight text-krom sm:text-5xl">
           Én partner — otte vagtløsninger
         </h2>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-2">
+        {/* Mobil: vandret hurtig-navigation mellem ydelser, sticky under headeren */}
+        <div className="sticky top-16 z-10 -mx-5 mt-6 border-b border-linje bg-ink-2/95 px-5 py-3 backdrop-blur-xl md:top-20 lg:hidden">
+          <div className="flex gap-2 overflow-x-auto scroll-px-5 scrollbar-skjult">
+            {ydelser.map((y, i) => (
+              <button
+                key={y.slug}
+                type="button"
+                onClick={() => goTil(i)}
+                className={cn(
+                  "shrink-0 whitespace-nowrap rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors",
+                  aktiv === i
+                    ? "border-accent bg-accent text-white"
+                    : "border-linje text-staal-lys"
+                )}
+              >
+                0{i + 1} · {y.titel}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8 grid gap-10 lg:mt-14 lg:grid-cols-2">
           {/* Venstre: pinned liste */}
           <div className="hidden lg:block">
             <div className="sticky top-28 space-y-1">

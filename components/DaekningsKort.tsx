@@ -19,13 +19,13 @@ export function DaekningsKort() {
   const [aktiv, setAktiv] = useState<By>(byer[0]);
 
   return (
-    <section className="border-t border-linje bg-ink py-24">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-2 lg:items-center lg:px-8">
+    <section className="border-t border-linje bg-ink py-14 md:py-24">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 md:gap-12 lg:grid-cols-2 lg:items-center lg:px-8">
         <Afsloer>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
             Dækningsområde
           </p>
-          <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-krom sm:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-krom sm:text-5xl">
             Trekantsområdet er vores hjemmebane
           </h2>
           <p className="mt-4 text-lg text-staal-lys">

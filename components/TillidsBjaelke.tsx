@@ -46,16 +46,23 @@ function Taeller({ til, suffix }: { til: number; suffix: string }) {
 
 export function TillidsBjaelke() {
   return (
-    <section className="border-y border-linje bg-ink-2">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px overflow-hidden px-5 py-10 lg:grid-cols-4 lg:px-8">
-        {fakta.map((f) => (
-          <div key={f.tekst} className="px-4 text-center">
-            <div className="font-[family-name:var(--font-archivo)] text-4xl font-extrabold tracking-tight text-krom lg:text-5xl">
-              <Taeller til={f.tal} suffix={f.suffix} />
+    <section className="border-y border-linje bg-ink-2 py-6 md:py-10">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-5 px-5 pb-1 scrollbar-skjult md:mx-0 md:grid md:grid-cols-4 md:gap-6 md:overflow-visible md:px-0 md:pb-0">
+          {fakta.map((f) => (
+            <div
+              key={f.tekst}
+              className="w-[38vw] shrink-0 snap-start rounded-2xl border border-linje bg-ink px-4 py-5 text-center md:w-auto md:shrink md:snap-none md:rounded-none md:border-0 md:bg-transparent md:px-4 md:py-0"
+            >
+              <div className="font-[family-name:var(--font-archivo)] text-3xl font-extrabold tracking-tight text-krom md:text-4xl lg:text-5xl">
+                <Taeller til={f.tal} suffix={f.suffix} />
+              </div>
+              <div className="mt-1.5 text-xs text-staal-lys md:mt-2 md:text-sm">
+                {f.tekst}
+              </div>
             </div>
-            <div className="mt-2 text-sm text-staal-lys">{f.tekst}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

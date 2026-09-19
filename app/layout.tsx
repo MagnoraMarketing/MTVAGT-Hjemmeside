@@ -4,7 +4,7 @@ import "./globals.css";
 import { Sidehoved } from "@/components/Sidehoved";
 import { Sidefod } from "@/components/Sidefod";
 import { RulleFremgang } from "@/components/RulleFremgang";
-import { MobilRingBjaelke } from "@/components/MobilRingBjaelke";
+import { MobilAppNav } from "@/components/MobilAppNav";
 import { GlatRul } from "@/components/GlatRul";
 import { MuseLys } from "@/components/MuseLys";
 
@@ -79,7 +79,7 @@ export default function RootLayout({
         <Sidehoved />
         <main className="flex-1">{children}</main>
         <Sidefod />
-        <MobilRingBjaelke />
+        <MobilAppNav />
       </body>
     </html>
   );

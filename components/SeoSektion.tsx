@@ -14,8 +14,8 @@ export function SeoSektion({
   faq: Faq[];
 }) {
   return (
-    <section className="border-t border-linje bg-ink-2 py-20">
-      <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-2 lg:px-8">
+    <section className="border-t border-linje bg-ink-2 py-14 md:py-20">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 md:gap-14 lg:grid-cols-2 lg:px-8">
         <Afsloer>
           <h2 className="text-3xl font-extrabold tracking-tight text-krom">
             {overskrift}
