@@ -9,7 +9,7 @@ export function CtaBaand({
   tekst?: string;
 }) {
   return (
-    <section className="relative overflow-hidden border-y border-linje bg-ink-2 py-20">
+    <section className="relative overflow-hidden border-y border-linje bg-ink-2 py-12 md:py-20">
       <div
         aria-hidden
         className="absolute inset-0 opacity-30"

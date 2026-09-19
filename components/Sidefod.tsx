@@ -9,7 +9,7 @@ import { PopupLink } from "@/components/PopupLink";
 export function Sidefod() {
   const aar = new Date().getFullYear();
   return (
-    <footer className="border-t border-linje bg-ink">
+    <footer className="border-t border-linje bg-ink pb-20 lg:pb-0">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-1">
           <Logo className="h-10 w-auto" />
