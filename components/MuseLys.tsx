@@ -16,8 +16,13 @@ export function MuseLys() {
     const reduceret = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
-    const touch = window.matchMedia("(pointer: coarse)").matches;
-    if (reduceret || touch) return;
+    // Bruger "any-pointer: fine" fremfor "pointer: coarse", da hybrid-pc'er
+    // (fx bærbare med touchskærm) ofte rapporterer en berøringsskærm som
+    // den primære pointer, selvom brugeren styrer med en mus. Det slog
+    // lyseffekten helt fra på den slags maskiner. Kun rene touch-enheder
+    // uden mus (mobil/tablet) mangler en "fine" pointer og skal skippes.
+    const ingenMus = !window.matchMedia("(any-pointer: fine)").matches;
+    if (reduceret || ingenMus) return;
 
     let raf = 0;
     let x = window.innerWidth / 2;
