@@ -102,12 +102,13 @@ export function CinematiskHero() {
         className="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-28 lg:px-8"
       >
         <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-linje bg-ink-2/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-staal-lys backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-linje bg-ink-2/60 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-staal-lys backdrop-blur sm:text-xs sm:tracking-[0.2em]">
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
             Autoriseret vagtselskab · Fredericia
           </span>
 
-          <TillidsChips className="mt-5" />
+          {/* Fylder unødigt på små skærme og gentages lige efter i TillidsBjaelke — vises fra sm og op. */}
+          <TillidsChips className="mt-5 hidden sm:flex" />
 
           <h1 className="mt-6 text-balance text-[2rem] font-extrabold leading-[1.05] tracking-tight text-krom [overflow-wrap:anywhere] sm:text-5xl sm:leading-[0.98] md:text-6xl lg:text-7xl">
             Tryghed hele døgnet
