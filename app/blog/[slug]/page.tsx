@@ -44,6 +44,13 @@ export async function generateMetadata({
         },
       ],
     },
+    // Uden dette arves root-layoutets twitter-felter uændret, så X/Twitter ville
+    // vise forsidens titel/beskrivelse i stedet for indlæggets ved deling.
+    twitter: {
+      card: "summary_large_image",
+      title: meta.seoTitel,
+      description: meta.seoBeskrivelse,
+    },
   };
 }
 
