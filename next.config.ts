@@ -30,6 +30,12 @@ const nextConfig: NextConfig = {
         destination: "/privatlivs-politik",
         permanent: true,
       },
+      // Gammelt Joomla-billedsti for ISO-certifikatet → ny /docs-sti
+      {
+        source: "/images/ISO_Certificat_MT_Vagt.pdf",
+        destination: "/docs/ISO_Certificat_MT_Vagt.pdf",
+        permanent: true,
+      },
     ];
   },
 };
