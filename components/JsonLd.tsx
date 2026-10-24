@@ -20,6 +20,8 @@ export function localBusinessLd() {
     name: virksomhed.navn,
     alternateName: virksomhed.kortNavn,
     url: SITE.url,
+    // Genbruger det dynamiske OG-billede, indtil det officielle logo lægges i /public.
+    image: absolutUrl("/opengraph-image"),
     telephone: virksomhed.telefon.kald,
     vatID: `DK${virksomhed.cvr}`,
     taxID: virksomhed.cvr,
