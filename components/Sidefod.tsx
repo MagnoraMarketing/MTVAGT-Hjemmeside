@@ -93,6 +93,17 @@ export function Sidefod() {
               <EmailLink className="text-krom hover:text-accent" />
             </p>
           </address>
+          <a
+            href={virksomhed.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Følg MT Vagt på Facebook"
+            className="mt-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-linje text-staal-lys transition-colors hover:border-accent hover:text-accent"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-4 w-4">
+              <path d="M13.5 21v-7.5h2.55l.38-2.96H13.5V8.65c0-.86.24-1.44 1.47-1.44h1.57V4.56A21 21 0 0 0 14.25 4.44c-2.27 0-3.82 1.38-3.82 3.93v2.17H7.87v2.96h2.56V21h3.07Z" />
+            </svg>
+          </a>
           <div className="mt-4 flex flex-wrap gap-2 text-xs text-staal">
             <PopupLink
               href={virksomhed.autorisation.isoCertifikat}
