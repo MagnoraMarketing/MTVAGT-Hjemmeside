@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { sideMetadata } from "@/lib/site";
 import Link from "next/link";
 import { virksomhed } from "@/content/virksomhed";
 import { ydelser, ydelseBySlug } from "@/content/ydelser";
@@ -9,12 +10,12 @@ import { MagnetiskKnap } from "@/components/MagnetiskKnap";
 import { EmailLink } from "@/components/EmailLink";
 import { SeoSektion } from "@/components/SeoSektion";
 
-export const metadata: Metadata = {
-  title: "Ledige stillinger — bliv vagt i trekantsområdet",
-  description:
+export const metadata: Metadata = sideMetadata({
+  titel: "Ledige stillinger — bliv vagt i trekantsområdet",
+  beskrivelse:
     "Søg job som vagt i trekantsområdet — fra brandvagt til byggepladsvagt, rundering og portvagt. Autoriseret vagtselskab i Fredericia. Send en uopfordret ansøgning.",
-  alternates: { canonical: "/ledige-stillinger" },
-};
+  sti: "/ledige-stillinger",
+});
 
 // Brandvagt er det primære fokusområde for jobsiden; resten af ydelserne
 // vises som sekundære jobmuligheder herunder.

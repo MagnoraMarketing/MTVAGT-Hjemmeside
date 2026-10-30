@@ -41,7 +41,7 @@ export function FastlaasteYdelser() {
           Sådan skaber vi tryghed
         </p>
         <h2 className="mt-4 max-w-2xl text-3xl font-extrabold tracking-tight text-krom sm:text-5xl">
-          Én partner — otte vagtløsninger
+          Én partner — ni vagtløsninger
         </h2>
 
         {/* Mobil: vandret hurtig-navigation mellem ydelser, sticky under headeren */}

@@ -10,7 +10,8 @@
     "lint": "eslint",
     "billeder": "tsx scripts/gen-billeder.ts",
     "illustrationer": "node scripts/gen-illustrationer.mjs && tsx scripts/gen-billeder.ts",
-    "scrape": "tsx scripts/scrape.ts"
+    "scrape": "tsx scripts/scrape.ts",
+    "indexnow": "tsx scripts/indexnow.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

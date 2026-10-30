@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { sideMetadata } from "@/lib/site";
 import { alleIndlaeg, alleKategorier } from "@/content/blog";
 import { Broedkrumme } from "@/components/Broedkrumme";
 import { Afsloer } from "@/components/Sektion";
 import { BlogFilter } from "@/components/BlogFilter";
 import { CtaBaand } from "@/components/CtaBaand";
 
-export const metadata: Metadata = {
-  title: "Blog om vagt, sikkerhed og tryghed",
-  description:
-    "Viden om byggepladssikkerhed, vagtløsninger, adgangskontrol og tryghed i trekantsområdet. Læs MT Vagts blog om sikkerhed og vagtservice.",
-  alternates: { canonical: "/blog" },
-};
+export const metadata: Metadata = sideMetadata({
+  titel: "Viden om vagt, byggepladssikring og tryghed",
+  beskrivelse:
+    "Guides om byggepladssikring, brandvagt, adgangskontrol, priser på vagtservice og valg af autoriseret vagtselskab. Viden fra MT Vagt.",
+  sti: "/blog",
+});
 
 export default function BlogOversigt() {
   const indlaeg = alleIndlaeg();

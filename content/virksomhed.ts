@@ -23,6 +23,7 @@ export const virksomhed = {
   },
   // E-mailen bygges i klienten af dele for at beskytte mod spam-robotter.
   emailDele: ["info", "mtvagt.dk"],
+  facebook: "https://www.facebook.com/profile.php?id=61596224663096",
   // Primært fokusområde (bruges i sætninger om nærområdet).
   region: "trekantsområdet",
   // Bredt dækningsområde: hele landet, med hovedfokus på trekantsområdet.

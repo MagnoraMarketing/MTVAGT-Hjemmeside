@@ -7,6 +7,7 @@ import { RulleFremgang } from "@/components/RulleFremgang";
 import { MobilAppNav } from "@/components/MobilAppNav";
 import { GlatRul } from "@/components/GlatRul";
 import { MuseLys } from "@/components/MuseLys";
+import { JsonLd, localBusinessLd, websiteLd } from "@/components/JsonLd";
 
 // Grotesk til overskrifter
 const archivo = Archivo({
@@ -73,6 +74,8 @@ export default function RootLayout({
       className={`${archivo.variable} ${inter.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-ink text-krom">
+        <JsonLd data={localBusinessLd()} />
+        <JsonLd data={websiteLd()} />
         <GlatRul />
         <MuseLys />
         <RulleFremgang />

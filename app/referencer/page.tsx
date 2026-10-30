@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { sideMetadata } from "@/lib/site";
 import { referencer, opgaveEksempler, brancher } from "@/content/referencer";
 import { virksomhed } from "@/content/virksomhed";
 import { Broedkrumme } from "@/components/Broedkrumme";
@@ -6,12 +7,12 @@ import { Afsloer } from "@/components/Sektion";
 import { SeoSektion } from "@/components/SeoSektion";
 import { CtaBaand } from "@/components/CtaBaand";
 
-export const metadata: Metadata = {
-  title: "Referencer — opgaver for kunder og samarbejdspartnere",
-  description:
+export const metadata: Metadata = sideMetadata({
+  titel: "Referencer — opgaver for kunder og samarbejdspartnere",
+  beskrivelse:
     "Se eksempler på MT Vagts opgaver — fra byggepladsvagt og rundering til kommunevagt. Autoriseret dansk vagtfirma med ekspertise i hele Danmark.",
-  alternates: { canonical: "/referencer" },
-};
+  sti: "/referencer",
+});
 
 export default function ReferencerSide() {
   return (

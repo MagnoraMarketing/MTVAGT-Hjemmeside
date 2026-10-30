@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { virksomhed } from "@/content/virksomhed";
 import { ydelser } from "@/content/ydelser";
+import { byer } from "@/content/byer";
 import { Logo } from "@/components/Logo";
 import { EmailLink } from "@/components/EmailLink";
 import { PopupLink } from "@/components/PopupLink";
@@ -10,7 +11,7 @@ export function Sidefod() {
   const aar = new Date().getFullYear();
   return (
     <footer className="border-t border-linje bg-ink pb-20 lg:pb-0">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-5 lg:px-8">
         <div className="lg:col-span-1">
           <Logo className="h-10 w-auto" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-staal-lys">
@@ -42,6 +43,40 @@ export function Sidefod() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/byggepladssikring"
+                className="text-staal-lys transition-colors hover:text-krom"
+              >
+                Byggepladssikring
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-krom">
+            Områder
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm">
+            {byer.map((b) => (
+              <li key={b.slug}>
+                <Link
+                  href={`/vagtfirma/${b.slug}`}
+                  className="text-staal-lys transition-colors hover:text-krom"
+                >
+                  Vagtfirma {b.navn}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                href="/vagtfirma"
+                className="text-staal-lys transition-colors hover:text-krom"
+              >
+                Hele Danmark
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -93,6 +128,17 @@ export function Sidefod() {
               <EmailLink className="text-krom hover:text-accent" />
             </p>
           </address>
+          <a
+            href={virksomhed.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Følg MT Vagt på Facebook"
+            className="mt-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-linje text-staal-lys transition-colors hover:border-accent hover:text-accent"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-4 w-4">
+              <path d="M13.5 21v-7.5h2.55l.38-2.96H13.5V8.65c0-.86.24-1.44 1.47-1.44h1.57V4.56A21 21 0 0 0 14.25 4.44c-2.27 0-3.82 1.38-3.82 3.93v2.17H7.87v2.96h2.56V21h3.07Z" />
+            </svg>
+          </a>
           <div className="mt-4 flex flex-wrap gap-2 text-xs text-staal">
             <PopupLink
               href={virksomhed.autorisation.isoCertifikat}

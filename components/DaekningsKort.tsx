@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Afsloer } from "@/components/Sektion";
 
@@ -58,6 +59,12 @@ export function DaekningsKort() {
           >
             <p className="font-semibold text-krom">{aktiv.navn}</p>
             <p className="mt-1 text-sm text-staal-lys">{aktiv.ramme}</p>
+            <Link
+              href={`/vagtfirma/${aktiv.navn.toLowerCase()}`}
+              className="mt-3 inline-block text-sm font-semibold text-krom underline hover:text-accent"
+            >
+              Vagtfirma i {aktiv.navn} →
+            </Link>
           </div>
         </Afsloer>
 

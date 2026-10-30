@@ -18,7 +18,7 @@ export const ydelseIndhold: Record<string, YdelseIndhold> = {
     heroBillede: "hero-byggeplads-nat",
     heroVariant: "nat",
     visRisikoSlider: true,
-    seoOverskrift: "Byggepladsvagt i trekantsområdet og på Fyn",
+    seoOverskrift: "Byggepladsvagt i trekantsområdet, på Fyn og i hele Danmark",
     seoAfsnit: [
       "Byggepladser er blandt de sværeste steder at sikre mekanisk. Åbne arealer, skiftende hegn, midlertidige adgangsveje og store mængder værdifuldt materiel gør pladsen til et oplagt mål for tyveri og hærværk – især uden for arbejdstid, i weekender og hen over ferieperioder. En synlig byggepladsvagt fra MT Vagt reducerer risikoen markant og signalerer med det samme, at pladsen er bevogtet.",
       "Vi tilpasser løsningen til byggeriets fase og risiko. Det kan være fast vagt om natten, planlagte runderinger på skiftende tidspunkter eller adgangskontrol ved porten i myldretid. Vores vagter er trænede i at opdage brand, tekniske fejl og uregelmæssigheder tidligt, så små hændelser ikke udvikler sig til dyre forsinkelser. Efter hver vagt får du en klar rapportering, så du altid ved, hvad der er sket på pladsen.",
@@ -45,8 +45,22 @@ export const ydelseIndhold: Record<string, YdelseIndhold> = {
         spoergsmaal: "Hvad sker der, hvis vagten opdager noget?",
         svar: "Vagten reagerer efter en fast procedure, dokumenterer hændelsen og kontakter de rette – kunde, alarmcentral eller myndigheder – afhængigt af situationen. Du får altid en rapportering bagefter.",
       },
+      {
+        spoergsmaal: "Hvad koster en byggepladsvagt?",
+        svar: "Prisen afhænger af antal vagttimer, tidspunkt (nat, weekend, helligdag), vagtform og varighed. Vi giver altid et konkret tilbud ud fra din plads, så du kun betaler for den dækning, der giver mening.",
+      },
+      {
+        spoergsmaal: "Kan kameraovervågning erstatte en byggepladsvagt?",
+        svar: "Kameraer dokumenterer og kan dække store arealer, men griber ikke selv ind og opdager sjældent begyndende brand. På udsatte pladser er kombinationen af kamera og fysisk vagt ofte den mest robuste løsning.",
+      },
+      {
+        spoergsmaal: "Leverer I byggepladsvagt i hele Danmark?",
+        svar: "Ja. Vi har hovedfokus på trekantsområdet og Fyn, men byggepladsvagt er en af de opgavetyper, hvor vi dækker hele Danmark.",
+      },
     ],
     relateretBlog: [
+      "hvad-koster-en-byggepladsvagt",
+      "kameraovervaagning-eller-fysisk-vagt-paa-byggepladsen",
       "hvorfor-sikkerhed-paa-byggepladsen-betaler-sig",
       "byggepladstyveri-i-danmark",
     ],

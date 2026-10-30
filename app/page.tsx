@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
+import { sideMetadata } from "@/lib/site";
 import { CinematiskHero } from "@/components/CinematiskHero";
 import { TillidsBjaelke } from "@/components/TillidsBjaelke";
 import { FastlaasteYdelser } from "@/components/FastlaasteYdelser";
 import { DaekningsKort } from "@/components/DaekningsKort";
 import { CtaBaand } from "@/components/CtaBaand";
 import { SeoSektion } from "@/components/SeoSektion";
-import { JsonLd, localBusinessLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "/" },
+  ...sideMetadata({
+    titel: "Autoriseret vagtfirma & vagtservice i Danmark",
+    beskrivelse:
+      "MT Vagt er et autoriseret vagtfirma med base i Fredericia: byggepladsvagt, brandvagt, runderingsvagt, portvagt og akut vagt døgnet rundt — trekantsområdet og hele Danmark. Ring +45 3131 4428.",
+    sti: "/",
+  }),
+  // Root-layoutets title-template gælder ikke forsiden selv — sæt hele titlen.
+  title: { absolute: "MT Vagt — autoriseret vagtfirma & vagtservice i Danmark" },
 };
 
 export default function Forside() {
   return (
     <>
-      <JsonLd data={localBusinessLd()} />
       <CinematiskHero />
       <TillidsBjaelke />
       <FastlaasteYdelser />

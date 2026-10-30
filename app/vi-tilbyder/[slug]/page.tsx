@@ -5,6 +5,7 @@ import { ydelser, ydelseBySlug } from "@/content/ydelser";
 import { ydelseIndhold } from "@/content/ydelse-indhold";
 import { ydelseEkstraSeo } from "@/content/ydelse-seo";
 import { alleIndlaeg } from "@/content/blog";
+import { byer } from "@/content/byer";
 import { virksomhed } from "@/content/virksomhed";
 import { Billede } from "@/components/Billede";
 import { Broedkrumme } from "@/components/Broedkrumme";
@@ -15,6 +16,16 @@ import { MagnetiskKnap } from "@/components/MagnetiskKnap";
 import { RisikoSlider } from "@/components/RisikoSlider";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE, absolutUrl, siteTitel } from "@/lib/site";
+import { BILLEDER } from "@/lib/billed-manifest";
+
+// Ydelser, hvor søjlesiden om byggepladssikring er relevant at linke til.
+const BYGGEPLADS_YDELSER = [
+  "byggepladsvagt",
+  "runderingsvagt",
+  "portvagt-stationaer-vagt",
+  "brandvagt",
+  "akut-vagt",
+];
 
 export function generateStaticParams() {
   return ydelser.map((y) => ({ slug: y.slug }));
@@ -28,6 +39,7 @@ export function generateMetadata({
   return params.then(({ slug }) => {
     const y = ydelseBySlug(slug);
     if (!y) return {};
+    const hero = ydelseIndhold[slug]?.heroBillede;
     return {
       title: siteTitel(y.seoTitel),
       description: y.seoBeskrivelse,
@@ -37,7 +49,20 @@ export function generateMetadata({
         description: y.seoBeskrivelse,
         url: absolutUrl(`/vi-tilbyder/${y.slug}`),
         // Sidespecifik openGraph erstatter root-layoutets — billedet skal sættes eksplicit igen.
-        images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+        images: [
+          {
+            url: (hero && BILLEDER[hero]) || "/opengraph-image",
+            width: 1200,
+            height: 630,
+            alt: `${y.titel} — ${y.undertitel}`,
+          },
+        ],
+      },
+      // Uden dette arves forsidens twitter-titel og -beskrivelse ved deling.
+      twitter: {
+        card: "summary_large_image",
+        title: y.seoTitel,
+        description: y.seoBeskrivelse,
       },
     };
   });
@@ -251,6 +276,37 @@ export default async function YdelseSide({
               </div>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* Lokale sider + søjlesiden om byggepladssikring (intern linking) */}
+      <section className="border-t border-linje bg-ink py-12">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <h2 className="text-lg font-bold text-krom">
+            {y.titel} i dit område
+          </h2>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {byer.map((b) => (
+              <li key={b.slug}>
+                <Link
+                  href={`/vagtfirma/${b.slug}`}
+                  className="inline-block rounded-full border border-linje px-4 py-2 text-sm text-staal-lys hover:border-staal hover:text-krom"
+                >
+                  Vagtfirma i {b.navn}
+                </Link>
+              </li>
+            ))}
+            {BYGGEPLADS_YDELSER.includes(y.slug) && (
+              <li>
+                <Link
+                  href="/byggepladssikring"
+                  className="inline-block rounded-full border border-accent/60 px-4 py-2 text-sm text-krom hover:border-accent"
+                >
+                  Guide: byggepladssikring
+                </Link>
+              </li>
+            )}
+          </ul>
         </div>
       </section>
 
