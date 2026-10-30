@@ -20,6 +20,20 @@ export const ydelseEkstraSeo: Record<string, SeoBlok[]> = {
         "MT Vagt er et autoriseret dansk vagtselskab. Alt personale er vagtuddannet, sikkerhedsgodkendt af danske myndigheder og bærer legitimationskort udstedt af Rigspolitiet. Autorisationen er din garanti for, at bevogtningen af din byggeplads løses professionelt og lovligt — ikke af amatører.",
       ],
     },
+    {
+      overskrift: "Adgangskontrol og kontrol af medarbejdere og leverandører",
+      afsnit: [
+        "På større byggepladser er der dagligt mange underentreprenører, vikarer og leverandører. Uden kontrol ved porten er det svært at vide, hvem der er på pladsen — og det er en risiko for både tyveri, arbejdsmiljø og ansvar. En portvagt kontrollerer legitimation og adgangskort, registrerer personer og køretøjer og fører en log over leverancer.",
+        "Om natten overtager byggepladsvagten: pladsens perimeter, hegn, porte og containere kontrolleres, og mistænkelig aktivitet håndteres efter en aftalt procedure — observere, dokumentere og kontakte kunde, alarmcentral eller politi afhængigt af situationen. Læs mere i vores guide til byggepladssikring.",
+      ],
+    },
+    {
+      overskrift: "Midlertidig eller permanent byggepladsvagt — fra én nat til hele byggeriet",
+      afsnit: [
+        "Behovet for vagt ændrer sig gennem byggeriet. Nogle pladser har brug for en vagt i en enkelt weekend eller over en ferie; andre har brug for fast døgnbemanding gennem hele råhus- og installationsfasen. Vi tilbyder både midlertidig byggepladsvagt med kort varsel og faste forløb over flere måneder.",
+        "Ved større entrepriser kombinerer vi ofte portvagt i arbejdstiden, nattevagt og weekendvagt med runderinger i de mindre udsatte timer. Bemandingen justeres løbende, efterhånden som pladsen lukkes, og risikoen ændrer sig — så du ikke betaler for mere vagt end nødvendigt.",
+      ],
+    },
   ],
 
   runderingsvagt: [

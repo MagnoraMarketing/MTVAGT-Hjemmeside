@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { virksomhed } from "@/content/virksomhed";
 import { ydelser } from "@/content/ydelser";
+import { byer } from "@/content/byer";
 import { Logo } from "@/components/Logo";
 import { EmailLink } from "@/components/EmailLink";
 import { PopupLink } from "@/components/PopupLink";
@@ -10,7 +11,7 @@ export function Sidefod() {
   const aar = new Date().getFullYear();
   return (
     <footer className="border-t border-linje bg-ink pb-20 lg:pb-0">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-5 lg:px-8">
         <div className="lg:col-span-1">
           <Logo className="h-10 w-auto" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-staal-lys">
@@ -42,6 +43,40 @@ export function Sidefod() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/byggepladssikring"
+                className="text-staal-lys transition-colors hover:text-krom"
+              >
+                Byggepladssikring
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-krom">
+            Områder
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm">
+            {byer.map((b) => (
+              <li key={b.slug}>
+                <Link
+                  href={`/vagtfirma/${b.slug}`}
+                  className="text-staal-lys transition-colors hover:text-krom"
+                >
+                  Vagtfirma {b.navn}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                href="/vagtfirma"
+                className="text-staal-lys transition-colors hover:text-krom"
+              >
+                Hele Danmark
+              </Link>
+            </li>
           </ul>
         </div>
 

@@ -33,9 +33,9 @@ export const ydelser: Ydelse[] = [
       "Rundering og fast tilstedeværelse efter behov",
     ],
     relaterede: ["runderingsvagt", "brandvagt", "portvagt-stationaer-vagt", "akut-vagt"],
-    seoTitel: "Byggepladsvagt Fyn & Trekantsområdet | MT Vagt",
+    seoTitel: "Byggepladsvagt i hele Danmark — nat, weekend & døgn | MT Vagt",
     seoBeskrivelse:
-      "Autoriseret byggepladsvagt i trekantsområdet. Beskyt materiel, værktøj og maskiner mod tyveri, hærværk og brand. Ring +45 3131 4428.",
+      "Autoriseret byggepladsvagt til entreprenører og bygherrer — fast vagt, rundering og adgangskontrol mod tyveri, hærværk og brand. Hele Danmark. Ring +45 3131 4428.",
   },
   {
     slug: "runderingsvagt",
@@ -54,9 +54,9 @@ export const ydelser: Ydelse[] = [
       "Dokumenteret rapportering efter hver runde",
     ],
     relaterede: ["byggepladsvagt", "brandvagt", "fastvagt", "akut-vagt"],
-    seoTitel: "Runderingsvagt i trekantsområdet | MT Vagt",
+    seoTitel: "Runderingsvagt — tilsyn nat & weekend i hele Danmark | MT Vagt",
     seoBeskrivelse:
-      "Runderingsvagt med tilsyn uden for åbningstid i boliger, virksomheder og på byggepladser. Autoriseret vagtselskab. Ring +45 3131 4428.",
+      "Runderingsvagt med planlagte tilsyn uden for åbningstid på byggepladser, i virksomheder og ejendomme. Dokumenteret rapport efter hver runde. Ring +45 3131 4428.",
   },
   {
     slug: "portvagt-stationaer-vagt",
@@ -75,7 +75,7 @@ export const ydelser: Ydelse[] = [
       "Kontrol af sikkerheds- og adgangsregler",
     ],
     relaterede: ["byggepladsvagt", "servicevagt-butiksvagt", "kommunevagt"],
-    seoTitel: "Portvagt & stationær vagt | Adgangskontrol | MT Vagt",
+    seoTitel: "Portvagt & adgangskontrol på byggepladser og anlæg | MT Vagt",
     seoBeskrivelse:
       "Portvagt og stationær vagt til adgangskontrol på byggepladser, i kommuner og virksomheder. Høj sikkerhed og service. Ring +45 3131 4428.",
   },
@@ -96,9 +96,9 @@ export const ydelser: Ydelse[] = [
       "Døgndækning i trekantsområdet",
     ],
     relaterede: ["runderingsvagt", "fastvagt", "byggepladsvagt"],
-    seoTitel: "Akut vagt med hurtig udrykning | MT Vagt",
+    seoTitel: "Akut vagt døgnet rundt — hurtig udrykning | MT Vagt",
     seoBeskrivelse:
-      "Akut vagt med hurtig udrykning og bevogtning i trekantsområdet — døgnet rundt. Autoriseret vagtselskab. Ring +45 3131 4428.",
+      "Akut vagt efter indbrud, brand eller vandskade — vi rykker hurtigt ud og bevogter døgnet rundt. Autoriseret vagtselskab i Fredericia. Ring +45 3131 4428.",
   },
   {
     slug: "servicevagt-butiksvagt",
@@ -117,7 +117,7 @@ export const ydelser: Ydelse[] = [
       "Håndtering af uro og konflikter",
     ],
     relaterede: ["portvagt-stationaer-vagt", "tryghedsvagt-psykiatri", "fastvagt"],
-    seoTitel: "Butiksvagt & servicevagt | Mindsk svind | MT Vagt",
+    seoTitel: "Servicevagt & butiksvagt — mindsk svind | MT Vagt",
     seoBeskrivelse:
       "Servicevagt og butiksvagt der mindsker svind og skaber tryghed i butik, varehus og virksomhed. Venlig fremtoning. Ring +45 3131 4428.",
   },
@@ -138,7 +138,7 @@ export const ydelser: Ydelse[] = [
       "Samarbejde med personale og myndigheder",
     ],
     relaterede: ["kommunevagt", "servicevagt-butiksvagt", "fastvagt"],
-    seoTitel: "Tryghedsvagt & psykiatri | Et tryggere Danmark | MT Vagt",
+    seoTitel: "Tryghedsvagt på bosteder & i psykiatrien | MT Vagt",
     seoBeskrivelse:
       "Tryghedsvagt i det offentlige rum, på bosteder og i psykiatrien. Professionel konflikthåndtering og respekt. Ring +45 3131 4428.",
   },
@@ -158,9 +158,9 @@ export const ydelser: Ydelse[] = [
       "Klar handling og alarmering efter fast procedure",
     ],
     relaterede: ["byggepladsvagt", "runderingsvagt", "akut-vagt"],
-    seoTitel: "Brandvagt ved varmt arbejde & events | MT Vagt",
+    seoTitel: "Brandvagt ved varmt arbejde, byggeri & events | MT Vagt",
     seoBeskrivelse:
-      "Brandvagt til varmt arbejde, byggepladser og events i trekantsområdet. Autoriseret vagtselskab med hurtig udrykning. Ring +45 3131 4428.",
+      "Brandvagt under og efter varmt arbejde, på byggepladser og ved events. Autoriseret vagtselskab — trekantsområdet og hele Danmark. Ring +45 3131 4428.",
   },
   {
     slug: "fastvagt",
@@ -178,7 +178,7 @@ export const ydelser: Ydelse[] = [
       "Skræddersyet til opgavens behov",
     ],
     relaterede: ["runderingsvagt", "portvagt-stationaer-vagt", "akut-vagt"],
-    seoTitel: "Fastvagt dag og nat | MT Vagt",
+    seoTitel: "Fastvagt på fast adresse — dag, nat eller døgn | MT Vagt",
     seoBeskrivelse:
       "Fastvagt med dedikeret medarbejder på fast adresse — dag, nat eller døgnet rundt. Autoriseret vagtselskab. Ring +45 3131 4428.",
   },
@@ -198,7 +198,7 @@ export const ydelser: Ydelse[] = [
       "Kontrakter tilpasset kommunale behov",
     ],
     relaterede: ["tryghedsvagt-psykiatri", "portvagt-stationaer-vagt", "runderingsvagt"],
-    seoTitel: "Kommunevagt til den offentlige sektor | MT Vagt",
+    seoTitel: "Kommunevagt — vagt til kommuner & offentlige institutioner | MT Vagt",
     seoBeskrivelse:
       "Kommunevagt til bosteder, genbrugspladser, skoler og rådhuse. Myndighedsgodkendt og servicemindet vagtløsning. Ring +45 3131 4428.",
   },

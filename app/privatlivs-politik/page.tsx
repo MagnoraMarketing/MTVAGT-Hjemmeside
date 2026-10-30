@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
+import { sideMetadata } from "@/lib/site";
 import { virksomhed } from "@/content/virksomhed";
 import { Broedkrumme } from "@/components/Broedkrumme";
 import { EmailLink } from "@/components/EmailLink";
 
-export const metadata: Metadata = {
-  title: "Privatlivspolitik",
-  description:
+export const metadata: Metadata = sideMetadata({
+  titel: "Privatlivspolitik",
+  beskrivelse:
     "Læs MT Vagts privatlivspolitik: hvordan vi behandler og beskytter dine personoplysninger, når du kontakter os eller bruger mtvagt.dk.",
-  alternates: { canonical: "/privatlivs-politik" },
-  robots: { index: true, follow: true },
-};
+  sti: "/privatlivs-politik",
+});
 
 export default function PrivatlivSide() {
   return (

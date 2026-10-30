@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { sideMetadata } from "@/lib/site";
 import { virksomhed } from "@/content/virksomhed";
 import { Broedkrumme } from "@/components/Broedkrumme";
 import { Afsloer } from "@/components/Sektion";
@@ -9,12 +10,12 @@ import { Certifikater } from "@/components/Certifikater";
 import { Anmeldelser } from "@/components/Anmeldelser";
 import { SeoSektion } from "@/components/SeoSektion";
 
-export const metadata: Metadata = {
-  title: "Kontakt — få en pris på din vagtopgave",
-  description:
-    "Få et uforpligtende tilbud på din vagtopgave i trekantsområdet. Hver opgave er individuel — vi tager små som store opgaver. Ring +45 3131 4428.",
-  alternates: { canonical: "/kontakt" },
-};
+export const metadata: Metadata = sideMetadata({
+  titel: "Kontakt — få en pris på din vagtopgave",
+  beskrivelse:
+    "Få et uforpligtende tilbud på byggepladsvagt, brandvagt eller anden vagtservice. Hver opgave prissættes individuelt — små som store. Ring +45 3131 4428.",
+  sti: "/kontakt",
+});
 
 const kortUrl =
   "https://www.google.com/maps?q=" +

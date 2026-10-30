@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { sideMetadata } from "@/lib/site";
 import Link from "next/link";
 import { ydelser } from "@/content/ydelser";
 import { ydelseIndhold } from "@/content/ydelse-indhold";
@@ -9,12 +10,12 @@ import { Afsloer } from "@/components/Sektion";
 import { CtaBaand } from "@/components/CtaBaand";
 import { SeoSektion } from "@/components/SeoSektion";
 
-export const metadata: Metadata = {
-  title: "Ydelser — vagtløsninger i trekantsområdet",
-  description:
-    "Se MT Vagts vagtløsninger: byggepladsvagt, runderingsvagt, portvagt, akut vagt, butiksvagt, tryghedsvagt, fastvagt og kommunevagt i trekantsområdet.",
-  alternates: { canonical: "/vi-tilbyder" },
-};
+export const metadata: Metadata = sideMetadata({
+  titel: "Vagtservice til erhverv & det offentlige — alle ydelser",
+  beskrivelse:
+    "Se MT Vagts vagtservice: byggepladsvagt, brandvagt, runderingsvagt, portvagt, fastvagt, akut vagt, servicevagt, tryghedsvagt og kommunevagt — i trekantsområdet og hele Danmark.",
+  sti: "/vi-tilbyder",
+});
 
 export default function YdelserOversigt() {
   return (

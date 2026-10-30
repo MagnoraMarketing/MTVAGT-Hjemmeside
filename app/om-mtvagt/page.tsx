@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { sideMetadata } from "@/lib/site";
 import Image from "next/image";
 import { virksomhed } from "@/content/virksomhed";
 import { Billede } from "@/components/Billede";
@@ -8,12 +9,12 @@ import { SeoSektion } from "@/components/SeoSektion";
 import { CtaBaand } from "@/components/CtaBaand";
 import { PopupLink } from "@/components/PopupLink";
 
-export const metadata: Metadata = {
-  title: "Om MT Vagt — autoriseret vagtselskab i Fredericia",
-  description:
-    "Lær MT Vagt at kende: et autoriseret vagtselskab i Fredericia, der løser vagtopgaver efter høj standard i hele trekantsområdet. Døgnvagt · Tillid · Tryghed.",
-  alternates: { canonical: "/om-mtvagt" },
-};
+export const metadata: Metadata = sideMetadata({
+  titel: "Om MT Vagt — autoriseret vagtselskab i Fredericia",
+  beskrivelse:
+    "Lær MT Vagt at kende: et autoriseret vagtselskab med base i Taulov ved Fredericia, der løser vagtopgaver efter høj standard i trekantsområdet og hele Danmark. ISO-certificeret, medlem af VSL og DI.",
+  sti: "/om-mtvagt",
+});
 
 const vaerdier = [
   {

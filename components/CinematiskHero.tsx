@@ -115,6 +115,10 @@ export function CinematiskHero() {
             <span className="block text-staal-lys">
               i <span className="text-accent">trekantsområdet</span>
             </span>
+            {/* Primært søgeord i H1 — vises som en rolig underlinje. */}
+            <span className="mt-4 block text-lg font-semibold leading-snug tracking-normal text-staal-lys sm:text-xl">
+              Autoriseret vagtfirma og vagtservice i hele Danmark
+            </span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-staal-lys">
