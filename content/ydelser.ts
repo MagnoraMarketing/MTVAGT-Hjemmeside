@@ -9,6 +9,9 @@ export type Ydelse = {
   kerne: string; // kort kerneopgave
   ikon: string; // navn på ikon-glyph
   intro: string; // 1-2 sætninger til hero/oversigt
+  // Kort, faktuelt svar på "hvem tilbyder X?" — øverst på siden, let at citere
+  // for både læsere og AI-søgning. Kun bekræftede facts.
+  kortSvar: string;
   punkter: string[]; // hvad løsningen dækker
   relaterede: string[]; // slugs til intern linking (2-3)
   seoTitel: string;
@@ -26,6 +29,8 @@ export const ydelser: Ydelse[] = [
     ikon: "crane",
     intro:
       "Byggepladser er svære at sikre mekanisk og et oplagt mål for tyveri og hærværk. En synlig vagt beskytter materiel, værktøj og maskiner — og forebygger brand uden for arbejdstid.",
+    kortSvar:
+      "MT Vagt & Vikarservice ApS er et autoriseret vagtselskab, der leverer byggepladsvagt til entreprenører, bygherrer og byggeledere — som fast vagt, rundering eller adgangskontrol, om natten, i weekender og døgnet rundt. Vi har base i Taulov ved Fredericia, hovedfokus på trekantsområdet og Fyn og leverer byggepladsvagt i hele Danmark.",
     punkter: [
       "Materiel-, værktøjs- og maskintyveri",
       "Hærværk og uautoriseret adgang",
@@ -47,6 +52,8 @@ export const ydelser: Ydelse[] = [
     ikon: "route",
     intro:
       "Vores runderingsvagter fører tilsyn i boliger, virksomheder og på byggepladser uden for normal åbningstid — opmærksomme på brand, kriminalitet og uregelmæssigheder.",
+    kortSvar:
+      "MT Vagt tilbyder runderingsvagt: planlagte tilsyn på skiftende tidspunkter uden for åbningstid på byggepladser, i virksomheder og ejendomme, med dokumenteret rapport efter hver runde. Vi er et autoriseret vagtselskab med base i Taulov ved Fredericia og dækker trekantsområdet, Fyn og resten af Danmark.",
     punkter: [
       "Planlagte tilsyn på skiftende tidspunkter",
       "Opmærksomhed på brand og tekniske fejl",
@@ -68,6 +75,8 @@ export const ydelser: Ydelse[] = [
     ikon: "gate",
     intro:
       "Portvagten styrer adgangen til byggepladser, kommuner og større virksomheder med behov for høj sikkerhed og god service — venligt, kontrolleret og dokumenteret.",
+    kortSvar:
+      "MT Vagt leverer portvagt og stationær vagt med adgangskontrol: registrering af personer og køretøjer, kontrol af legitimation og log over leverancer på byggepladser, kommunale anlæg og større virksomheder. MT Vagt er et autoriseret vagtselskab med base i Taulov ved Fredericia.",
     punkter: [
       "Adgangskontrol af personer og køretøjer",
       "Registrering og legitimation ved indgang",
@@ -89,6 +98,8 @@ export const ydelser: Ydelse[] = [
     ikon: "siren",
     intro:
       "Når noget sker akut, rykker vi hurtigt ud og bevogter udstyr for virksomheder, entreprenører, boligselskaber, foreninger, museer og hele den offentlige sektor.",
+    kortSvar:
+      "MT Vagt tilbyder akut vagt døgnet rundt: hurtig udrykning og bevogtning efter indbrud, brand, vandskade eller anden akut hændelse — for virksomheder, entreprenører, boligselskaber og det offentlige. Ring +45 3131 4428. Vi er et autoriseret vagtselskab med base i Taulov ved Fredericia.",
     punkter: [
       "Hurtig udrykning ved akutte hændelser",
       "Bevogtning af udstyr og bygninger",
@@ -110,6 +121,8 @@ export const ydelser: Ydelse[] = [
     ikon: "cart",
     intro:
       "En servicemindet vagt i virksomhed, varehus eller butik skaber tryghed for både kunder og medarbejdere — med en venlig fremtoning og et vågent øje.",
+    kortSvar:
+      "MT Vagt leverer servicevagt og butiksvagt, der mindsker svind og skaber tryghed i butikker, varehuse og virksomheder — med en venlig, servicemindet fremtoning. MT Vagt er et autoriseret vagtselskab med base i Taulov ved Fredericia.",
     punkter: [
       "Synlig, tryghedsskabende tilstedeværelse",
       "Forebyggelse af svind og butikstyveri",
@@ -131,6 +144,8 @@ export const ydelser: Ydelse[] = [
     ikon: "heart-shield",
     intro:
       "Vores tryghedsvagter skaber ro og tryghed i det offentlige rum, på bosteder og i psykiatriske miljøer — med respekt, tålmodighed og professionel konflikthåndtering. Et tryggere Danmark.",
+    kortSvar:
+      "MT Vagt tilbyder tryghedsvagt i det offentlige rum, på bosteder og i psykiatrien, med rolig og respektfuld konflikthåndtering i samarbejde med personalet. MT Vagt er et autoriseret vagtselskab med base i Taulov ved Fredericia.",
     punkter: [
       "Tryghedsskabende tilstedeværelse",
       "Rolig og respektfuld konflikthåndtering",
@@ -151,6 +166,8 @@ export const ydelser: Ydelse[] = [
     ikon: "flame",
     intro:
       "En brandvagt fra MT Vagt holder øje med brandrisikoen under og efter varmt arbejde, ved arrangementer og andre steder med forhøjet risiko — og griber ind, før en gnist bliver til en brand.",
+    kortSvar:
+      "MT Vagt leverer brandvagt under og efter varmt arbejde (svejsning, skæring, tagarbejde), på byggepladser og ved arrangementer. Vagten holder øje med gnister og ulmebrand og alarmerer efter fast procedure. MT Vagt er et autoriseret vagtselskab med base i Taulov ved Fredericia og dækker trekantsområdet og hele Danmark.",
     punkter: [
       "Brandvagt under og efter varmt arbejde som svejsning, skæring og tagarbejde",
       "Brandvagt ved arrangementer, events og festivaler",
@@ -171,6 +188,8 @@ export const ydelser: Ydelse[] = [
     ikon: "pin",
     intro:
       "Har du brug for en fast vagt på en bestemt adresse? Vi placerer en dedikeret medarbejder dag og/eller nat — kontinuerlig tryghed, ét fast ansigt.",
+    kortSvar:
+      "MT Vagt tilbyder fastvagt: en dedikeret vagt på en fast adresse — dag, nat eller døgnet rundt — fx på tomme ejendomme, byggerier i standby eller virksomheder med høj risiko. MT Vagt er et autoriseret vagtselskab med base i Taulov ved Fredericia.",
     punkter: [
       "Dedikeret vagt på fast adresse",
       "Dag-, nat- eller døgndækning",
@@ -191,6 +210,8 @@ export const ydelser: Ydelse[] = [
     ikon: "building",
     intro:
       "Vi løser vagtopgaver for den offentlige sektor — bosteder, genbrugspladser, skoler og rådhuse — med diskret, servicemindet og myndighedsgodkendt personale. En løsning der passer til vores eksisterende arbejde i det offentlige.",
+    kortSvar:
+      "MT Vagt løser vagtopgaver for kommuner og offentlige institutioner — bosteder, genbrugspladser, skoler og rådhuse — med vagtuddannet, sikkerhedsgodkendt og servicemindet personale. MT Vagt er et autoriseret vagtselskab med base i Taulov ved Fredericia.",
     punkter: [
       "Bosteder og sociale tilbud",
       "Genbrugspladser og kommunale anlæg",
