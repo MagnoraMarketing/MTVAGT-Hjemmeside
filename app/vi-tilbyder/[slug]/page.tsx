@@ -93,7 +93,7 @@ export default async function YdelseSide({
     "@type": "Service",
     name: y.titel,
     serviceType: y.titel,
-    description: y.seoBeskrivelse,
+    description: y.kortSvar,
     provider: { "@id": `${SITE.url}/#organisation` },
     areaServed: virksomhed.daekning.map((by) => ({ "@type": "City", name: by })),
     url: absolutUrl(`/vi-tilbyder/${y.slug}`),
@@ -142,6 +142,18 @@ export default async function YdelseSide({
               className="mx-auto max-w-md lg:max-w-none"
             />
           </Afsloer>
+        </div>
+      </section>
+
+      {/* Kort svar — direkte og citerbart for læsere og AI-søgning */}
+      <section className="border-t border-linje bg-ink py-10">
+        <div className="mx-auto max-w-4xl px-5 lg:px-8">
+          <div className="rounded-2xl border border-accent-dyb/60 bg-accent/10 p-6">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-accent-klar">
+              Kort svar: hvem tilbyder {y.titel.toLowerCase()}?
+            </h2>
+            <p className="mt-2 text-lg leading-relaxed text-krom">{y.kortSvar}</p>
+          </div>
         </div>
       </section>
 

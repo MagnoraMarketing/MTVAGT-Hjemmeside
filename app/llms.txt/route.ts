@@ -32,7 +32,7 @@ export function GET() {
     "## Ydelser",
     "",
     ...ydelser.map(
-      (y) => `- [${y.titel}](${absolutUrl(`/vi-tilbyder/${y.slug}`)}): ${y.intro}`
+      (y) => `- [${y.titel}](${absolutUrl(`/vi-tilbyder/${y.slug}`)}): ${y.kortSvar}`
     ),
     `- [Byggepladssikring (guide)](${absolutUrl("/byggepladssikring")}): Sådan kombineres hegn, belysning, adgangskontrol, kameraer og fysisk vagt.`,
     "",

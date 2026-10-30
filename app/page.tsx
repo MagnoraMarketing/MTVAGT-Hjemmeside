@@ -47,6 +47,18 @@ export default function Forside() {
             svar: "Ja. Vi tilbyder akut vagt med hurtig udrykning og bevogtning døgnet rundt i hele trekantsområdet.",
           },
           {
+            spoergsmaal: "Hvilket vagtselskab kan sikre min byggeplads?",
+            svar: "MT Vagt er et autoriseret vagtselskab, der leverer byggepladsvagt, runderingsvagt, portvagt med adgangskontrol og brandvagt til entreprenører og bygherrer — med hovedfokus på trekantsområdet og Fyn og levering i hele Danmark.",
+          },
+          {
+            spoergsmaal: "Hvordan ser jeg, om et vagtselskab er autoriseret?",
+            svar: "Vagtvirksomhed i Danmark kræver autorisation efter vagtloven, og vagterne skal bære legitimationskort udstedt af Rigspolitiet. Bed vagtselskabet bekræfte autorisationen, og se efter legitimationskortet hos vagten.",
+          },
+          {
+            spoergsmaal: "Hvad koster en vagt?",
+            svar: "Prisen afhænger af vagtform, antal timer, tidspunkt (nat, weekend, helligdag), varighed og krav til opgaven. MT Vagt giver altid et konkret tilbud ud fra din opgave.",
+          },
+          {
             spoergsmaal: "Hvordan får jeg et tilbud?",
             svar: "Ring til os på +45 3131 4428 eller udfyld kontaktformularen, så vender vi tilbage med en løsning tilpasset din opgave.",
           },
